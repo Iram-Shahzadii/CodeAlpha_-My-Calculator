@@ -1,0 +1,121 @@
+  * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      transition: 0.3s ease all;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #1f1f1f, #383838);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .calculator {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 20px;
+      width: 330px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      color: #fff;
+      position: relative;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+
+    .display {
+      background-color: rgba(0, 0, 0, 0.3);
+      height: 60px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      padding: 15px;
+      font-size: 1.8rem;
+      text-align: right;
+      overflow-x: auto;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    button {
+      font-size: 1.4rem;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+    }
+
+    button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+
+    .equal {
+      grid-column: span 2;
+      background: #4cd964;
+      color: #000;
+    }
+
+    .clear {
+      background: #ff3b30;
+    }
+
+    .operator {
+      background: #ff9500;
+    }
+
+    /* Light theme */
+    body.light {
+      background: linear-gradient(135deg, #f1f1f1, #ffffff);
+    }
+
+    body.light .calculator {
+      color: #222;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    }
+
+    body.light .display {
+      background: #fff;
+      color: #333;
+    }
+
+    body.light button {
+      background: #eee;
+      color: #222;
+    }
+
+    body.light .equal {
+      background: #34c759;
+      color: white;
+    }
+
+    body.light .clear {
+      background: #ff3b30;
+      color: white;
+    }
+
+    body.light .operator {
+      background: #ff9500;
+      color: white;
+    }
